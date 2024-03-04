@@ -22,16 +22,16 @@ if(anni<18){
     let valore = (km * 0.21);
     let sconto = ((valore/100) * 20);
     prezzo = valore - sconto;
-    console.log(prezzo.toFixed(2));
+    console.log(Math.round(prezzo*100)/100);
 }
 else if(anni>65){
     valore = (km * 0.21);
     sconto = ((valore/100) * 40);
     prezzo = valore - sconto;
-    console.log(prezzo.toFixed(2));
+    console.log(Math.round(prezzo*100)/100);
 }
 else{
     valore = (km * 0.21);
     prezzo = valore
-    console.log(prezzo.toFixed(2));
+    console.log(Math.round(prezzo*100)/100);
 }
