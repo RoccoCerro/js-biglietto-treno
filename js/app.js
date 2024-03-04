@@ -19,23 +19,30 @@ let anni = parseInt(prompt("Inserisci la tua età"));
 let prezzo;
 console.log ("km " + km + " anni " + anni);
 
-// SE il cliente ha meno di 18 anni moltiplico i km inseriti dal cliente per 0,21€ e sottraggo il 20%
-if(anni<18){
-    let valore = (km * 0.21);
-    let sconto = ((valore/100) * 20);
-    prezzo = valore - sconto;
-    console.log(prezzo.toFixed(2));
+if(isNaN(anni) && isNaN(km)){
+    alert("Devi inserire un numero come input")
 }
-// SE il cliente ha più di 65 anni moltiplico i km inseriti dal cliente per 0,21€ e sottraggo il 40%
-else if(anni>65){
-    valore = (km * 0.21);
-    sconto = ((valore/100) * 40);
-    prezzo = valore - sconto;
-    console.log(prezzo.toFixed(2));
-}
-// ALTRIMENTI moltiplico i km per inseriti dal cliente per 0,21€
 else{
-    valore = (km * 0.21);
-    prezzo = valore
-    console.log(prezzo.toFixed(2));
+    
+    // SE il cliente ha meno di 18 anni moltiplico i km inseriti dal cliente per 0,21€ e sottraggo il 20%
+    if(anni<18){
+        let valore = (km * 0.21);
+        let sconto = ((valore/100) * 20);
+        prezzo = valore - sconto;
+        console.log(prezzo.toFixed(2));
+    }
+    // SE il cliente ha più di 65 anni moltiplico i km inseriti dal cliente per 0,21€ e sottraggo il 40%
+    else if(anni>65){
+        valore = (km * 0.21);
+        sconto = ((valore/100) * 40);
+        prezzo = valore - sconto;
+        console.log(prezzo.toFixed(2));
+    }
+    // ALTRIMENTI moltiplico i km per inseriti dal cliente per 0,21€
+    else{
+        valore = (km * 0.21);
+        prezzo = valore
+        console.log(prezzo.toFixed(2));
+    }
+
 }
