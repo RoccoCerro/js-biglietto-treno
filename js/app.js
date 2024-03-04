@@ -19,7 +19,7 @@ let anni = parseInt(prompt("Inserisci la tua età"));
 let prezzo;
 console.log ("km " + km + " anni " + anni);
 
-if(isNaN(anni) && isNaN(km)){
+if(isNaN(anni) || isNaN(km)){
     alert("Devi inserire un numero come input")
 }
 else{
