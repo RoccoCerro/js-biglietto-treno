@@ -16,21 +16,22 @@
 let km = parseInt(prompt("Inserisci i km che dovrai percorrere"));
 let anni = parseInt(prompt("Inserisci la tua età"));
 let prezzo;
+console.log ("km " + km + " anni " + anni);
 
 if(anni<18){
     let valore = (km * 0.21);
-    let sconto = (valore/100) * 20;
+    let sconto = ((valore/100) * 20);
     prezzo = valore - sconto;
     console.log(prezzo.toFixed(2));
 }
 else if(anni>65){
-    let valore = (km * 0.21);
-    let sconto = (valore/100) * 40;
+    valore = (km * 0.21);
+    sconto = ((valore/100) * 40);
     prezzo = valore - sconto;
     console.log(prezzo.toFixed(2));
 }
 else{
-    let valore = (km * 0.21);
+    valore = (km * 0.21);
     prezzo = valore
     console.log(prezzo.toFixed(2));
 }
